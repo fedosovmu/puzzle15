@@ -16,7 +16,8 @@ namespace puzzle15
         {
             History = new Stack<int>();
         }
-        // hi
+
+
 
         public override bool Shift(int value)
         {

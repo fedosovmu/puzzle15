@@ -12,12 +12,15 @@ namespace puzzle15
         {
             get;
         }
+
         int this[int x, int y]
         {
             get;
             set;
         }
+
         void Randomize();
+
         bool IsFinished
         {
             get;

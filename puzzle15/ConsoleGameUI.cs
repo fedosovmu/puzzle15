@@ -12,7 +12,18 @@ namespace puzzle15
         public ConsoleGameUI(IPlayable iPlayable)
         {
             this.iPlayable = iPlayable;
-            reDraw();
+
+            while (true)
+            {
+                reDraw();
+                if (iPlayable.IsFinished)
+                    Console.WriteLine("YOU WIN");
+                Console.Write("Shift: ");
+                int command = Convert.ToInt32( Console.ReadLine() );
+                if (command == 0)
+                    break;
+                iPlayable.Shift(command);
+            }     
         }
 
         
@@ -26,7 +37,6 @@ namespace puzzle15
                     Console.Write(String.Format("{0,3}", iPlayable[i, j]));
                 Console.WriteLine();
             }
-
         }
     }
 }
