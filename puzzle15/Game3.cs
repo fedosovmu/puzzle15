@@ -17,8 +17,6 @@ namespace puzzle15
             History = new Stack<int>();
         }
 
-
-
         public override bool Shift(int value)
         {
             bool isShifted = base.Shift(value);
